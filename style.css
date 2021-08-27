@@ -16,6 +16,7 @@
 .avatar{
     animation-name: zoomin;
     animation-duration: 1s;
+    border-radius: 99px;	
 }
 
 @keyframes zoomin {
