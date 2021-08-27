@@ -2,6 +2,9 @@
     height: 95vh;
     width: 100vw;
     background-image: url('https://raw.githubusercontent.com/Divyesh-Kamalanaban/divyesh-kamalanaban.github.io/main/car.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     text-align: center;
     justify-content: center;
