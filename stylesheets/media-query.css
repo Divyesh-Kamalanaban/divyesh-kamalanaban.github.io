@@ -1,0 +1,129 @@
+   @media screen and (max-width: 992px) {
+    .nav-list {
+      width: 50%;
+    }
+    .divimage{
+      transform: translate(90%, 100%) !important;
+    }
+  }
+  
+  @media screen and (max-width: 880px) {
+    .divimage{
+      transform: translate(60%, 100%) !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+    .logo {
+      display: none;
+    }
+    .nav-list {
+      width: 100% !important;
+    }
+    .grid-container{
+      grid-gap: 10px 20px !important;
+    }
+    .dev-card i{
+      padding: .5rem !important;
+      font-size: 1.25rem !important;
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .dev-card{
+      height: 30% !important;
+    }
+    .hero-section{
+      flex-direction: column !important;
+    }
+
+    .half-sec-1{
+      clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%) !important;
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .divimage{
+      height: 100px;
+      transform: translate(100%, -20%);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .divimage{
+      display: none !important;
+    }
+    .half-sec-1 img{
+      display: block !important;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      margin: 3rem;
+    }
+    .divider{
+      display: none;
+    }
+
+  }
+  
+@media screen and (max-width: 550px) {
+  .round-up{
+    flex-direction: column !important;
+  }
+  .roundup-card{
+    width: 90% !important;
+  }
+  .css-projects{
+    height: 120vh;
+  }
+  .carousel{
+    width: 90vw;
+  }
+}
+  
+ 
+
+  @media screen and (max-width: 420px) {
+    .dev, .design{
+      flex-direction: column !important;
+    }
+
+    .dev-card, .design-card{
+      width: 80vw !important;
+    }
+
+    
+  }
+
+  @media screen and (max-width: 380px) {
+    .divimage{
+      transform: translate(120%, -20%) !important;
+    }
+  }
+
+  @media screen and (max-width: 290px) {
+    .nav-list li {
+      font-size: 0.8rem;
+    }
+    .hero-title {
+      font-size: 1.5rem !important;
+    }
+    .dev{
+      flex-direction: column !important;
+    }
+  
+  }
+  
+  @media screen and (max-width: 220px) {
+    .nav-list li {
+      font-size: 0.6rem;
+    }
+  }
+  
+  /*Media Queries Rules for the Nav Bar ends*/
