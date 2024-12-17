@@ -57,17 +57,6 @@ body {
           transform: translate(0%, -20%);
 }
 
-.logo::after {
-  content: 'BETA';
-  color: #1f1f1f;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-  padding: 2px;
-  letter-spacing: 0;
-  font-size: 9px;
-  position: absolute;
-  text-align: center !important;
-}
 
 /*Adding the styles for unordered list nav*/
 .nav-list {
