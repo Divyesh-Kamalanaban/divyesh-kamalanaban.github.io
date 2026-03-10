@@ -1,1 +1,0 @@
-# Divyesh Views About Page.
