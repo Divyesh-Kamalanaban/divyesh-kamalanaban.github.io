@@ -1,0 +1,38 @@
+[
+  {
+    "id": "chunk_0000",
+    "text": "Project: SleeQC \u2014 Resource-Adaptive Post-Quantum Cryptography on ESP32 Link: https Divyesh-Kamalanaban/sleeqc\n\nProject: Gridifix - ML-Powered Fault Detection and Localization Engine for Smart Grids Link: https Divyesh-Kamalanaban/gridifix\n\nProject: Seaquenced - Identifying Taxonomy and Assessing Biodiversity from eDNA Datasets Link: https Link: https Programming Languages: Python, JavaScript Frameworks: React.js, Node.js, Express.js, Tailwind CSS Backend Technologies: REST APIs, MongoDB, Express AI/ML Tools: TensorFlow, PyTorch, scikit-learn, TensorFlow Lite Micro, TinyML Data Libraries: NumPy, Pandas Visualization and UI: GSAP, Three.js Version Control and Deployment: Git, GitHub, ESP-IDF, Docker Specializations: Deep Neural Networks, Random Forests, Edge AI, Post-Quantum Cryptography GitHub\nIssued: June 2025\u2003Expires"
+  },
+  {
+    "id": "chunk_0001",
+    "text": "Credential ID: 17cdbe3f-45d4-41a1-a4e0-ab10af8b5039 Focus Areas: Git, GitHub workflow, repository management, open-source collaboration. IBM\nIssued: June 2025\u2003Credential ID JYTMFRU\nFocus Areas: SDLC, software design principles, testing, and deployment fundamentals. Meta\nIssued: April 2025\u2003Credential ID P\nSkills: JavaScript programming fundamentals and DOM manipulation. HackerRank\nIssued: January 2025\u2003Credential ID Skills: Python syntax, data types, control flow, and problem solving. IBM\nIssued: January 2025\u2003Credential ID JWDMFOLSLDE\nSkills: NumPy, Pandas, machine learning basics, and data visualization. Intel Corporation\nIssued: December 2024 Skills: AI prompting and strategic application for business innovation. HackerRank\nIssued: December 2024\u2003Credential ID"
+  },
+  {
+    "id": "chunk_0002",
+    "text": "Skills: React.js, JavaScript, CSS, web development, component architecture. Meta\nIssued: December 2024\u2003Credential ID IMWRONZSYJ\nSkills: HTML5, CSS, responsive web design, front-end fundamentals. HackerRank\nIssued: December 2024\u2003Credential ID Skills: Algorithmic Thinking and Logical Problem Solving. Udemy\nIssued: October 2024\u2003Credential ID Skills: Verilog HDL, Digital Design, Testbench Development, and Simulation. HackerRank\nIssued: July 2024\u2003Credential ID Skills: React.js fundamentals, component props and state management. HackerRank\nIssued: March 2024\u2003Credential ID Skills: JavaScript syntax and web development fundamentals. HackerRank\nIssued: September 2021\u2003Credential ID Skills: Cascading Style Sheets (CSS) and responsive styling for web interfaces. CGPA: 9.12 / 10."
+  },
+  {
+    "id": "chunk_0003",
+    "text": "Duration: June 2023 \u2013 May 2027. Email: divyeshkamalanaban@gmail.com GitHub: https Divyesh-Kamalanaban\nLinkedIn: https Portfolio: https Blog: https Phone: +91 8667072079 [SUMMARY] Engineer focused on solving engineering problems with artificial intelligence and embedded systems. Have built AI pipelines for power systems, bioinformatics, and edge devices. Capable of full-stack web development, backend integration, and ML engineering. Enjoys bridging deep learning, machine learning with real-world engineering contexts. Interested in scalable inference, lightweight ML systems, AI/ML pipelines. Pursuing Bachelor of Engineering, Electronics and Communication Engineering at SRM Institute of Science and Technology. Intelligence Engineer by trade, Intelligence Engineer by passion, [PROJECTS]"
+  },
+  {
+    "id": "chunk_0004",
+    "text": "Developed a continually developing system demonstrating resource-adaptive cryptography on an ESP32-S3 microcontroller. Implemented a dynamic Post-Quantum Cryptography (PQC) engine that balances high security with real-time stability. Integrated a TinyML decision module using TensorFlow Lite to monitor system load and autonomously switch cryptographic parameters. Deployed ML-DSA-44 and ML-DSA-87 (Dilithium variants) for dynamic security scaling. Resolved critical stack overflow issues and optimized system memory. Developed firmware inculcating custom quantized ML algorithms trained on real-word resource activity data. Ensured system reliability through task-level profiling and adaptive switching. Handled complex C/C++ linker issues within the ESP-IDF framework and coordinated multi-language integration. ://github.com/"
+  },
+  {
+    "id": "chunk_0005",
+    "text": "Designed a research pipeline for machine-learning-based grid fault detection and localization. Affiliated with Divyesh's internship at NIT Trichy. Generated over 21,000 simulated power grid scenarios including controlled faults and variable loads using pandapower. Trained deep neural networks on 14,000 samples, achieving 95% accuracy in power flow estimation. Implemented ensemble models reaching 92% fault detection and 100% localization accuracy. Enhanced solver performance by integrating a DLPF-based optimization, reducing computation time by 70% compared to Newton\u2013Raphson. ://github.com/ Contributed to Smart India Hackathon 2025 under the bioinformatics category. Built a classification pipeline to identify species from environmental DNA (eDNA) data using machine learning."
+  },
+  {
+    "id": "chunk_0006",
+    "text": "Expanded raw dataset from 5 FASTQ species files by applying mutation-based augmentation, yielding 10,000+ synthetic samples. Quantized Nucleotide Transformer models from 32-bit to 4-bit precision, cutting GPU memory usage from 9.5GB to 2.5GB with minimal accuracy loss. Supported multi-stage collaboration including preprocessing, model training, and integration. ://github.com/Divyesh-Kamalanaban/seaquenced [EXPERIENCE] National Institute of Technology (NIT) Trichy \u2014 Research Intern Worked on grid-based fault simulation and machine learning model development for smart power systems. Generated a large-scale dataset of grid conditions and explored differential power flow solvers. Contributed to the early design of a data-driven fault detection engine."
+  },
+  {
+    "id": "chunk_0007",
+    "text": "Circle Communications \u2014 MERN Developer Intern Developed Tortovoice, CRM with invoice modules for a financial and inventory management platform. Worked with MongoDB, Express, React, and Node.js to create end-to-end solutions. Automated repetitive document workflows and integrated API-based file generation systems. ://github.com/Divyesh-Kamalanaban/Tortovoice [SKILLS] [CERTIFICATIONS] GitHub Foundations \u2014 : June 2028 Introduction to Software Engineering \u2014 : Q1MS2 Programming with JavaScript \u2014 : CON85YOUUE3 Python (Basic) \u2014 : 843c4c4c5644 Python for Data Science, AI & Development \u2014 : 7 AI for Entrepreneurship \u2014 Frontend Developer (React) Certificate \u2014 : 9de990d8b066 Introduction to Front-End Development \u2014 : 81 Problem Solving (Basic) \u2014 :"
+  },
+  {
+    "id": "chunk_0008",
+    "text": "f20d0005336b Verilog HDL Fundamentals for Digital Design and Verification \u2014 : UC-ff4fb6b7-e0b3-4d18-9c8b-786a53a6dd96 React (Basic) \u2014 : 6D5803129F99 JavaScript (Basic) \u2014 : 7D2B65A371A9 CSS (Basic) \u2014 : 41937326f876 [EDUCATION] Bachelor of Engineering in Electronics and Communication Engineering \u2014 SRM Institute of Science and Technology, Ramapuram. Year Of Study - Pre-Final / 3rd Year [CONTACT] ://github.com/://www.linkedin.com/in/divyesh-kamalanaban ://divyesh.is-a.dev ://divyeshviews.blogspot.com"
+  }
+]

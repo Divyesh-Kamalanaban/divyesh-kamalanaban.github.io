@@ -1,0 +1,461 @@
+* {
+  padding: 0;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.carousel-image-container {
+  height: 400px !important;
+  position: relative;
+}
+
+.carousel-image-list {
+  list-style: none;
+  position: relative;
+  height: 400px;
+  width: 600px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 500px;
+}
+
+.carousel-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 500px;
+}
+
+.left, .right {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 125px;
+  /*To draw the navigational elements over other elements.*/
+  z-index: 100;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.left {
+  left: 0px;
+}
+
+.right {
+  right: 0px;
+}
+
+.posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 600px;
+  height: 300px;
+}
+
+.post1 {
+  background: #F3AC3C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.guitar-head {
+  position: relative;
+  margin-right: 190px;
+  z-index: 4;
+}
+
+.guitar-head-big {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #998235;
+}
+
+.sub-guitar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #998235;
+  position: absolute;
+  top: 9.5px;
+  left: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bbl {
+  height: 40px;
+  width: 10px;
+  background: #1A4341;
+  position: absolute;
+  border-radius: 30px;
+  top: 40px;
+  left: 40px;
+}
+
+.smaller-circle {
+  background: #F3AC3C;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inner-circle {
+  background: #1A4341;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.guitar-neck {
+  height: 20px;
+  width: 160px;
+  background: #1A4341;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+
+.string-box {
+  height: 30px;
+  width: 40px;
+  background: #998235;
+  border-radius: 30%;
+  position: absolute;
+  left: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+
+.string1, .string2 {
+  height: 4px;
+  width: 20px;
+  background: #1A4341;
+  border-radius: 30px;
+}
+
+.l1 {
+  margin-top: -5px;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.string-container {
+  position: absolute;
+  top: 13px;
+}
+
+/*Ukulele or Guitar Styling ends here.*/
+/*The Sunset stripes styling starts here*/
+.post2 {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top {
+  width: 100%;
+  height: 50%;
+  background: #D25B70;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottom {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: #6CB3A9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circle-top {
+  position: absolute;
+  background: #F6DF96;
+  height: 197px;
+  width: 200px;
+  border-radius: 50%;
+  -webkit-transform: translateY(37%);
+          transform: translateY(37%);
+}
+
+.circle-bottom {
+  background: #F6DF96;
+  height: 194px;
+  width: 198.5px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-37.1%) scale(0.999);
+          transform: translateY(-37.1%) scale(0.999);
+}
+
+.stripe {
+  background: #6CB3A9;
+  height: 15px;
+  margin: 5px;
+  width: 100%;
+}
+
+.stripe-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  top: 89px;
+}
+
+/*Adding styling for Black lives matter;*/
+.post3 {
+  background: #F9E492;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.thumb {
+  left: 42%;
+  height: 65px;
+  width: 25px !important;
+  border: #f9e492 solid 5px;
+  z-index: 100;
+  bottom: 120.8px !important;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  top: 35%;
+}
+
+.fingers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  position: relative;
+  width: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 45px;
+}
+
+.finger-1, .finger-2, .finger-3, .finger-4, .thumb {
+  width: 20px;
+  background: #191919;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.finger-1 {
+  height: 45px;
+  left: 5px;
+}
+
+.finger-2 {
+  height: 55px;
+  left: 26.5px;
+}
+
+.finger-3 {
+  height: 45px;
+  right: 21.5px;
+}
+
+.finger-4 {
+  height: 35px;
+  right: 0px;
+}
+
+.palm, .palm:after {
+  background: #191919;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 138px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.palm:after {
+  content: '';
+  width: 50px;
+  height: 45px;
+  top: 40px;
+  left: 25px;
+}
+
+/*Black lives matter styling is over*/
+/*Adding mask styling*/
+.post4 {
+  background: #293462;
+  position: relative;
+}
+
+.mask-body {
+  width: 150px;
+  height: 100px;
+  background: #FFF1C1;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.string-1, .string-2 {
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid #FFF1C1;
+  top: 33.4%;
+}
+
+.string-1 {
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  left: 29%;
+}
+
+.string-2 {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  right: 29%;
+}
+
+.box-1, .box-2 {
+  height: 10px;
+  width: 40px;
+  background: #FE5F55;
+  border-radius: 30px;
+  position: absolute;
+  left: 20px;
+}
+
+.box-1 {
+  top: 20px;
+}
+
+.box-2 {
+  top: 40px;
+}
+
+.mask-circle {
+  width: 40px;
+  height: 40px;
+  background: #fe5f55;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+/*# sourceMappingURL=carousel.css.map */
