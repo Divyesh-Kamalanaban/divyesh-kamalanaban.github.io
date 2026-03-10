@@ -17,8 +17,16 @@ You are a specialist at keeping portfolio content synchronized with external sou
 1. Fetch the GitHub repositories page to get latest project information
 2. Parse repository data (name, description, tech stack, link)
 3. Fetch LinkedIn profile to extract certifications
-4. Parse certification data (name, issuer, date, credential ID if available)
-5. Write all gathered data into about-data.txt (projects + certifications) in the public folder for the about-editor agent
+4. Parse certification data ensuring consistent structure:
+   - **Title**: Certification name
+   - **Company Name**: Issuing organization
+   - **Issue Date**: When certification was earned
+   - **Credential ID or URL**: Unique identifier or verification link
+5. Write all gathered data into about-data.txt (projects + certifications) in the public folder for the about-editor agent, using the format:
+   ```
+   Title — Company Name
+   Issued: Date [Expires: Date] Credential ID: ID
+   ```
 6. Generate a formatted about-text.txt file in the documentation folder summarizing the data for documentation purposes
 7. If about-data.txt contains entries, update the projects array in projects.jsx and add certifications section to about.jsx
 7. After applying any modifications, invoke the design-validator. (Design-validator will in turn call the seo-validator to adjust metadata if necessary.)

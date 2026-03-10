@@ -44,14 +44,33 @@
 - Network/model access: The RAG demo requires network access to fetch remote models from Hugging Face (unless you preconfigure and serve local models). If running in restricted environments, precompute embeddings using the python helpers and serve the static `embeddings.f32` + `dim.json` from `public/data/`.
 - Memory & performance: The current approach keeps all embeddings in memory — large corpora may cause memory pressure in the browser. Use precomputed top-level filtering or a server-side vector DB for large datasets.
 - Vite override: Because `vite` is aliased to `rolldown-vite` in `package.json`, standard Vite behavior may differ slightly; if dev server issues occur, inspect `package.json` and `node_modules`.
+- Duplicate Tailwind imports: Having multiple `@import "tailwindcss";` statements in CSS files can cause conflicts and result in blank pages. Ensure only one import in the main CSS file (typically `src/index.css`).
+- Animation container requirement: Components using `.animate-stagger-item` cards must have a parent container with `.animate-stagger-container` class. Without this parent, the `useScrollAnimation` hook cannot find and animate the cards, leaving them invisible at `opacity-0`. This applies to all portfolio sections (Projects, Experience, Certifications).
+- Async data + animations: When a component loads data asynchronously (e.g., certifications.jsx fetches from `/about-data.txt`), the scroll animation hook may run on mount BEFORE the data arrives, finding zero elements. Use a separate `useGSAP` effect with the data as a dependency to set up animations AFTER the data is loaded. Example: component loads items via `useState` + `useEffect`, then has a second `useGSAP` effect with `dependencies: [items]` to set up stagger animations once items exist in DOM.
 
 **Where to extend or add tests**
 
 - Add unit tests for `cosineTopK` and any utilities in `src/sections/rag-files/`.
 - If adding precomputed embeddings, add an integration check that `dim.json` matches the `embeddings.f32` layout and that `texts.json` length equals `count`.
 
+**AI Agent Workflow & Documentation Responsibilities**
+
+All AI agents (lead-developer, documenter, etc.) must follow this process after completing each successful step or task:
+
+1. **Update this file** (`copilot-instructions.md`) with any discovered gotchas, bugs, patterns, or lessons learned.
+2. **Update respective skill files** if the agent has a dedicated skill file (e.g., `lead-developer` skill file). Record:
+   - What problem was solved
+   - What approach was used
+   - Any mistakes encountered and how they were fixed
+   - Best practices or patterns to follow for future similar tasks
+3. **Keep documentation current** — if a bug is fixed, update the "What to watch for / gotchas" section. If a new pattern is established, add it to "Project-specific Patterns & Conventions".
+4. **Do NOT create separate markdown files** to document individual tasks or changes unless explicitly requested. Keep all knowledge centralized in existing documentation files.
+
+This ensures that the collective knowledge of all agents working on this project accumulates and future agents have access to proven solutions and lessons learned.
+
 **Contact / Next steps**
 
 - I added these instructions to help AI coding agents and new contributors boot quickly. If you want, I can also:
   - Add a short script to load precomputed `embeddings.f32` into the client for faster startup.
   - Add a small integration test validating corpus/embeddings consistency.
+- **Documentation responsibility**: The `documenter` agent should maintain and update this file whenever bugs are discovered, fixes are applied, or new gotchas are encountered. When issues like the duplicate Tailwind import problem occur and are resolved, the documenter must update the "What to watch for / gotchas" section to prevent future occurrences.

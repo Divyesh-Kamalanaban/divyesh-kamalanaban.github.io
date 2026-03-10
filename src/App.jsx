@@ -39,7 +39,7 @@ function NavBar({ activeSection, setActiveSection, theme, toggleTheme }) {
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
-        className="glass-nav p-3 rounded-full hover:scale-105 active:scale-95 transition-all duration-700 ease-in-out text-[var(--text-primary)]"
+        className="glass-nav p-3 rounded-full hover:scale-105 active:scale-95 transition-all duration-700 ease-in-out text-(--text-primary)"
       >
         {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5 text-white" />}
       </button>
@@ -116,7 +116,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-full text-[var(--text-primary)] font-['Manrope_Variable'] tracking-tight selection:bg-[var(--text-primary)] selection:text-[var(--bg-primary)]">
+    <div className="relative min-h-screen w-full text-(--text-primary) font-['Manrope_Variable'] tracking-tight selection:bg-(--text-primary) selection:text-(--bg-primary)">
       <div className="global-bg" />
       <NavBar
         activeSection={activeSection}
