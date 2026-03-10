@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # minimal permission
+      id-token: write # required for OIDC
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
