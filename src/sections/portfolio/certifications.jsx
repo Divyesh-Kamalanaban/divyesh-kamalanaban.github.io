@@ -113,7 +113,7 @@ export default function Certifications() {
               >
                 <div className="flex items-center gap-2 text-[var(--accent-solid)]">
                   <Award className="w-8 h-8 md:w-10 md:h-10" />
-                  <h3 className="font-bold text-lg">{item.title}</h3>
+                  <h3 className="font-bold text-lg tracking-tighter">{item.title}</h3>
                 </div>
                 <p className="text-[var(--text-secondary)] text-sm">Issued by: {item.company}</p>
                 <p className="text-[var(--text-secondary)] text-sm">Issued: {item.issueDate}</p>
