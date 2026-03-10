@@ -1,0 +1,44 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js + Vite static deployment
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i 
+    - run: npm ci
+    - run: npm run build --if-present
+    #- run: npm test jest not configured yet
+    #pulled the github pages site action from actions...
+    - name: Deploy GitHub Pages site
+      uses: actions/deploy-pages@v4.0.5
+      #with:
+        # GitHub token
+        #token: # default is ${{ github.token }}
+        # Time in milliseconds after which to timeout and cancel the deployment (default: 10 minutes)
+        #timeout: # optional, default is 600000
+        # Maximum number of status report errors before cancelling a deployment (default: 10)
+        #error_count: # optional, default is 10
+        # Time in milliseconds between two deployment status report (default: 5 seconds)
+        #reporting_interval: # optional, default is 5000
+        # Name of the artifact to deploy
+        #artifact_name: # optional, default is github-pages
+        # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
+        #preview: # optional, default is false
+          
