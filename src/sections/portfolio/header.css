@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800');
+@import "tailwindcss";
+
+.header-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  @apply w-full max-w-7xl mx-auto px-6 flex flex-col items-center justify-center relative z-10;
+}
+
+.hero-text {
+  @apply text-center flex flex-col items-center animate-[slideUp_0.8s_ease-out_forwards];
+}
+
+/* Background Animation Details */
+/* Procedural Tech Gradient */
+.tech-gradient-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Increased opacity for visibility */
+  background: radial-gradient(circle at 15% 50%, rgba(138, 35, 135, 0.4), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(242, 113, 33, 0.3), transparent 25%);
+  background-color: var(--bg-primary);
+  /* Deep dark base */
+  overflow: hidden;
+}
+
+.tech-gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%,
+      rgba(233, 64, 87, 0.2) 0%,
+      rgba(15, 23, 42, 0.15) 25%,
+      transparent 50%);
+  animation: rotateBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotateBg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Background Animation Details */
+.section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* Above gradient */
+  background-size: 40px 40px;
+  /* Pink Grid */
+  background-image:
+    linear-gradient(to right, rgba(233, 64, 87, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(233, 64, 87, 0.1) 1px, transparent 1px);
+
+  /* Dynamic mask following cursor */
+  mask-image: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      black 10%,
+      transparent 70%);
+  -webkit-mask-image: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      black 10%,
+      transparent 70%);
+
+  opacity: 0.6;
+  /* More visible grid */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Fallback for touch devices: Keep grid visible */
+@media (hover: none) or (pointer: coarse) {
+  .section-bg {
+    mask-image: none;
+    -webkit-mask-image: none;
+    opacity: 0.3;
+  }
+}
+
+.subtitle {
+  font-family: 'IBM Plex Serif', serif;
+  font-style: italic;
+  @apply text-xl md:text-2xl mt-4 leading-relaxed;
+  color: var(--text-secondary);
+}
+
+/* Lucide Icon Row enhancements */
+.icon-row-container {
+  @apply mt-12 w-full overflow-hidden opacity-50 hover:opacity-100 transition-opacity duration-500;
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.icon-row {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: scrollLeft 40s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.lucide-icon {
+  @apply w-8 h-8 md:w-10 md:h-10 transition-all duration-300;
+  color: var(--text-secondary);
+}
+
+.lucide-icon:hover {
+  @apply scale-110 drop-shadow-md transition-all;
+  color: var(--text-primary);
+}
+
+.btn-primary {
+  color: var(--btn-primary-text);
+  background-color: var(--btn-primary-bg);
+}

@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+:root {
+  /* Default body font: Manrope */
+  font-family: 'Manrope Variable', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Fluid typography: 16px min, 19px max */
+  font-size: clamp(16px, 2vw, 19px);
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: inherit;
+  background-color: transparent;
+  /* Background handled in App */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter Variable', system-ui, sans-serif;
+  letter-spacing: -0.025em;
+  /* tracking-tight */
+}
+
+p {
+  font-family: 'Manrope Variable', system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.25s ease-out, color 0.4s ease-in;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #dde1e4;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-primary: #121212;
+    --text-secondary: #4b5563;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --btn-primary-bg: #121212;
+    --btn-primary-text: #ffffff;
+    --accent: linear-gradient(45deg, rgb(242, 113, 33), rgb(233, 64, 87), rgb(138, 35, 135));
+    --accent-solid: rgb(233, 64, 87);
+  }
+
+  .dark {
+    /* Dark Mode */
+    --bg-primary: #1F1F1F;
+    --bg-secondary: #1f2937;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    /* Keep for other elements if needed */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --btn-primary-bg: #ffffff;
+    --btn-primary-text: #000000;
+    --accent: linear-gradient(45deg, rgb(242, 113, 33), rgb(233, 64, 87), rgb(138, 35, 135));
+    --accent-solid: rgb(233, 64, 87);
+
+    /* Neumorphism Shadows */
+    --neu-shadow-dark: #141414;
+    --neu-shadow-light: #2a2a2a;
+
+  }
+}
+
+@layer utilities {
+  .global-bg {
+    @apply fixed inset-0 z-[-1] transition-colors duration-500 ease-in-out;
+    background-color: var(--bg-primary);
+  }
+
+  /* Noise texture - slightly different opacity for modes if needed, keeping simple for now */
+  .global-bg::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    mask-image: radial-gradient(circle at 50% 50%, black, transparent 90%);
+    /* Soften edges */
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md shadow-xl;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    will-change: transform, opacity;
+  }
+
+  /* Neumorphic override for Dark Mode */
+  :is(.dark .glass-card) {
+    background-color: var(--bg-primary);
+    border: none;
+    box-shadow: 8px 8px 16px var(--neu-shadow-dark), -8px -8px 16px var(--neu-shadow-light);
+  }
+
+  .glass-card:hover {
+    /* Transform handled by GSAP or removed to prevent conflict during entry */
+    background-color: color-mix(in srgb, var(--glass-bg), var(--text-primary) 5%);
+    border-color: color-mix(in srgb, var(--glass-border), var(--text-primary) 10%);
+  }
+
+  /* Neumorphic Hover for Dark Mode */
+  :is(.dark .glass-card:hover) {
+    background-color: var(--bg-primary);
+    /* Maintain solid color */
+    border-color: transparent;
+    box-shadow: 10px 10px 20px var(--neu-shadow-dark), -10px -10px 20px var(--neu-shadow-light);
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-xl shadow-2xl transition-all duration-300;
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+  }
+
+  .bg-accent {
+    background: var(--accent);
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 shadow-md relative overflow-hidden;
+    transition: all 0.3s ease;
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 15px rgba(233, 64, 87, 0.3);
+  }
+
+  .btn-primary:hover {
+    opacity: 0.95;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(233, 64, 87, 0.4);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden;
+    color: var(--text-secondary);
+  }
+
+  .section-container {
+    @apply w-full min-h-screen flex flex-col items-center justify-center py-20 px-4 relative z-10;
+  }
+
+  .content-wrapper {
+    @apply max-w-6xl w-full flex flex-col items-center opacity-0 animate-[fadeIn_0.8s_ease-out_forwards];
+    color: var(--text-primary);
+  }
+
+  /* Helper for text secondary override */
+  .text-sec {
+    color: var(--text-secondary);
+  }
+
+  .text-accent {
+    background: var(--accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    /* Often needed for gradient text */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
