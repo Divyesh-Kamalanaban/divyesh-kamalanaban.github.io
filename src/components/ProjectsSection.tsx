@@ -19,7 +19,7 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
       />
       
       {/* Modal Card */}
-      <div className="relative w-full max-w-2.5xl bg-[#0E0E0F] border border-white/10 rounded-lg p-6 sm:p-8 overflow-y-auto max-h-[90vh] z-10 select-text">
+      <div className="relative w-full md:w-1/2 max-w-2.5xl bg-[#0E0E0F] border border-white/10 rounded-lg p-6 sm:p-8 overflow-y-auto max-h-[90vh] z-10 select-text">
         <button 
           onClick={onClose}
           className="absolute top-5 right-5 p-1 text-on-surface-variant hover:text-white hover:bg-white/5 transition-all rounded"
