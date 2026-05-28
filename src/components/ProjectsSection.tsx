@@ -10,6 +10,8 @@ interface ProjectDetailsModalProps {
 function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
   if (!project) return null;
 
+  const details = project.details;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
@@ -36,7 +38,7 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
               </span>
             ))}
           </div>
-          <h3 className="font-headline text-2xl sm:text-3.5xl font-extrabold text-[#bdff00] leading-tight tracking-tighter">
+          <h3 className="font-headline text-2xl sm:text-3.5xl font-extrabold text-primary-fixed leading-tight tracking-tighter">
             {project.title}
           </h3>
           {project.version && (
@@ -52,11 +54,11 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
           </div>
           <div>
             <p className="text-[10px] text-white/40 uppercase font-bold tracking-wider mb-0.5">Status</p>
-            <p className="text-sm font-semibold text-[#bdff00]">▲ Production</p>
+            <p className="text-sm font-semibold text-primary-fixed">▲ {details?.status || 'Production'}</p>
           </div>
           <div>
             <p className="text-[10px] text-white/40 uppercase font-bold tracking-wider mb-0.5">Deployment Latency</p>
-            <p className="text-sm font-semibold text-secondary">{project.id === 'neurallink' ? 'Sub-50ms Global' : project.id === 'quantcore' ? '12ms Internal' : 'Responsive'}</p>
+            <p className="text-sm font-semibold text-secondary">{details?.deploymentLatency || 'Responsive'}</p>
           </div>
         </div>
 
@@ -64,11 +66,11 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
         <div className="space-y-6">
           <div>
             <h4 className="text-xs uppercase font-extrabold text-white tracking-widest mb-2 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#bdff00]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed" />
               The Mission Goals
             </h4>
             <p className="text-sm text-on-surface-variant leading-relaxed">
-              {project.description} Custom engineered to minimize physical payload serialization times. Developed specifically to meet enterprise-grade scalability profiles, sustaining peak computational stress tests.
+              {details?.mission || project.description}
             </p>
           </div>
 
@@ -78,26 +80,20 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
               Technical Implementation Details
             </h4>
             <ul className="space-y-2 text-sm text-on-surface-variant font-mono">
-              <li className="flex items-start gap-2">
-                <span className="text-secondary select-none">$&gt;</span>
-                <span>Configured active load balancing and multi-node sharding structures.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-secondary select-none">$&gt;</span>
-                <span>Integrated specialized gRPC systems to scale down communication bottlenecks.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-secondary select-none">$&gt;</span>
-                <span>Established edge telemetry monitoring loops via direct WebSockets connections.</span>
-              </li>
+              {(details?.implementationDetails || []).map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-secondary select-none">$&gt;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {project.id === 'neurallink' && (
-            <div className="bg-[#131314] border border-[#bdff00]/10 p-5 rounded-lg">
-              <p className="text-xs uppercase font-extrabold text-[#bdff00] select-none tracking-widest mb-2">Architect's Post-Mortem Report</p>
+          {details?.postMortem && (
+            <div className="bg-surface-dim border border-primary-fixed/10 p-5 rounded-lg">
+              <p className="text-xs uppercase font-extrabold text-primary-fixed select-none tracking-widest mb-2">Architect's Post-Mortem Report</p>
               <p className="text-xs text-on-surface-variant leading-relaxed font-mono">
-                "Our edge clusters sustained continuous, unbuffered data ingestion pipelines across 48 worldwide validation nodes. The core sub-cluster maintained 400k predictions per second using PyTorch inference pipelines natively bundled within C++ runtime containers."
+                {details.postMortem}
               </p>
             </div>
           )}
@@ -107,7 +103,7 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
         <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-outline-variant/30">
           <button 
             onClick={onClose}
-            className="px-6 py-2.5 bg-white text-black hover:bg-[#bdff00] hover:text-black hover:shadow-[0_0_15px_rgba(189,255,0,0.3)] text-xs uppercase font-extrabold tracking-wider transition-all"
+            className="px-6 py-2.5 bg-white text-black hover:bg-primary-fixed hover:text-black hover:shadow-[0_0_15px_rgba(189,255,0,0.3)] text-xs uppercase font-extrabold tracking-wider transition-all"
           >
             Acknowledge Session
           </button>
@@ -116,7 +112,7 @@ function ProjectDetailsModal({ project, onClose }: ProjectDetailsModalProps) {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-2.5 border border-white/20 text-white hover:border-[#bdff00] hover:text-[#bdff00] text-xs uppercase font-bold tracking-wider hover:bg-white/5 transition-all text-center"
+            className="flex items-center gap-2 px-6 py-2.5 border border-white/20 text-white hover:border-primary-fixed hover:text-primary-fixed text-xs uppercase font-bold tracking-wider hover:bg-white/5 transition-all text-center"
           >
             <ExternalLink className="w-3.5 h-3.5" />
             <span>Interactive Demo</span>
@@ -141,6 +137,19 @@ export default function ProjectsSection() {
       category: 'ai',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAKzSYH_Pc3gEvoHyTxqOofiKRcCPrl9PczkZmbhvKf10DOeGFZzM7Iss8nMJyAlJWAFal3CqLL1vI32ntudXAmMtfd_yDqUHxzgvd8EEjxIq71jiolwgkWwPcFueYgMwN6EC2LR0Q71HPAjNfvwxg68W5vStzI-OS6zqVK6ucDKURC2Mz6Zo7wSqFQEdtnqIeKB9u4z1vir6OQqM80e9H3iKjk7O6yJpH-x5WYDO1T48qAGqXCXnPt41ThUu405FogJ8dPYPIEw',
       version: 'v2.4.0_STABLE',
+      details: {
+        status: 'Production',
+        deploymentLatency: 'Sub-50ms Global',
+        mission:
+          'An edge-computing framework designed to distribute machine learning workloads across global node clusters with sub-50ms latency. Custom engineered to minimize physical payload serialization times. Developed specifically to meet enterprise-grade scalability profiles, sustaining peak computational stress tests.',
+        implementationDetails: [
+          'Configured active load balancing and multi-node sharding structures.',
+          'Integrated specialized gRPC systems to scale down communication bottlenecks.',
+          'Established edge telemetry monitoring loops via direct WebSockets connections.',
+        ],
+        postMortem:
+          'Our edge clusters sustained continuous, unbuffered data ingestion pipelines across 48 worldwide validation nodes. The core sub-cluster maintained 400k predictions per second using PyTorch inference pipelines natively bundled within C++ runtime containers.',
+      },
     },
     {
       id: 'quantcore',
@@ -149,6 +158,17 @@ export default function ProjectsSection() {
       tags: ['RUST', 'GOLANG'],
       category: 'infra',
       icon: 'analytics',
+      details: {
+        status: 'Production',
+        deploymentLatency: '12ms Internal',
+        mission:
+          'Real-time financial telemetry platform processing 10M+ events per second with multi-threaded message queues and ultra-low serialization overhead.',
+        implementationDetails: [
+          'Built a low-latency event pipeline around lock-minimized message queues.',
+          'Optimized serialization to keep cross-service propagation overhead near zero.',
+          'Used Rust and Go services to balance throughput, safety, and operational simplicity.',
+        ],
+      },
     },
     {
       id: 'auraui',
@@ -156,6 +176,17 @@ export default function ProjectsSection() {
       description: 'A glassmorphic design system for AI-centric web applications featuring optimized hardware-accelerated animations and high-fidelity inputs.',
       tags: ['REACT', 'WEBGL'],
       category: 'system',
+      details: {
+        status: 'Production',
+        deploymentLatency: 'Responsive',
+        mission:
+          'A glassmorphic design system for AI-centric web applications featuring optimized hardware-accelerated animations and high-fidelity inputs.',
+        implementationDetails: [
+          'Designed reusable primitives for visual consistency across the product surface.',
+          'Prioritized GPU-friendly animation patterns for smooth interaction states.',
+          'Focused on crisp input handling and layered transparency effects.',
+        ],
+      },
     },
     {
       id: 'pulsegraph',
@@ -163,6 +194,17 @@ export default function ProjectsSection() {
       description: 'GraphQL mesh for federated microservices architectures. Automatically consolidates micro-API schemas with lightning fast request pipelining.',
       tags: ['NODE.JS', 'AWS'],
       category: 'infra',
+      details: {
+        status: 'Production',
+        deploymentLatency: 'Responsive',
+        mission:
+          'GraphQL mesh for federated microservices architectures. Automatically consolidates micro-API schemas with lightning fast request pipelining.',
+        implementationDetails: [
+          'Unified disparate service schemas behind a composable GraphQL boundary.',
+          'Reduced request fan-out with smarter pipelining and batching strategies.',
+          'Deployed on AWS to keep the mesh close to the rest of the infrastructure.',
+        ],
+      },
     },
   ];
 
@@ -206,7 +248,7 @@ export default function ProjectsSection() {
             onClick={() => setSelectedProject(projects[0])}
             className="md:col-span-8 group relative gradient-border cursor-pointer select-none"
           >
-            <div className="glass-card p-8 h-full min-h-[340px] flex flex-col justify-between overflow-hidden relative">
+            <div className="glass-card p-8 h-full min-h-85 flex flex-col justify-between overflow-hidden relative">
               {projects[0].image && (
                 <img 
                   className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-[1.03] transition-all duration-700 pointer-events-none" 
@@ -222,7 +264,7 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-primary mb-4 tracking-tighter hover:text-[#bdff00] transition-colors">
+                <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-primary mb-4 tracking-tighter hover:text-primary-fixed transition-colors">
                   {projects[0].title}
                 </h3>
                 <p className="text-sm sm:text-base text-on-surface-variant max-w-lg tracking-normal leading-relaxed">
@@ -246,9 +288,9 @@ export default function ProjectsSection() {
             onClick={() => setSelectedProject(projects[1])}
             className="md:col-span-4 group gradient-border cursor-pointer select-none text-left"
           >
-            <div className="glass-card p-8 h-full flex flex-col justify-between min-h-[340px]">
+            <div className="glass-card p-8 h-full flex flex-col justify-between min-h-85">
               <div>
-                <div className="w-12 h-12 flex items-center justify-center bg-purple-900/40 text-secondary mb-6 rounded-lg border border-purple-500/20 group-hover:bg-[#bdff00] group-hover:text-black transition-all">
+                <div className="w-12 h-12 flex items-center justify-center bg-purple-900/40 text-secondary mb-6 rounded-lg border border-purple-500/20 group-hover:bg-primary-fixed group-hover:text-black transition-all">
                   <TrendingUp className="w-6 h-6" />
                 </div>
                 <h3 className="font-headline text-2xl font-extrabold text-primary mb-4 tracking-tighter">
@@ -271,7 +313,7 @@ export default function ProjectsSection() {
             onClick={() => setSelectedProject(projects[2])}
             className="md:col-span-4 group gradient-border cursor-pointer select-none text-left"
           >
-            <div className="glass-card p-8 h-full flex flex-col justify-between min-h-[180px]">
+            <div className="glass-card p-8 h-full flex flex-col justify-between min-h-45">
               <div>
                 <h3 className="font-headline text-2xl font-extrabold text-primary mb-4 tracking-tighter">
                   {projects[2].title}
@@ -296,7 +338,7 @@ export default function ProjectsSection() {
             onClick={() => setSelectedProject(projects[3])}
             className="md:col-span-4 group gradient-border cursor-pointer select-none text-left"
           >
-            <div className="glass-card p-8 h-full flex flex-col justify-between min-h-[180px]">
+            <div className="glass-card p-8 h-full flex flex-col justify-between min-h-45">
               <div>
                 <h3 className="font-headline text-2xl font-extrabold text-primary mb-4 tracking-tighter">
                   {projects[3].title}
@@ -318,7 +360,7 @@ export default function ProjectsSection() {
 
           {/* Open Source Contribution (Spans 4 columns) */}
           <div className="md:col-span-4 group gradient-border select-none text-left relative">
-            <div className="glass-card p-8 h-full bg-gradient-to-br from-purple-500/10 to-transparent flex flex-col justify-between min-h-[180px]">
+            <div className="glass-card p-8 h-full bg-linear-to-br from-purple-500/10 to-transparent flex flex-col justify-between min-h-45">
               <div>
                 <h3 className="font-headline text-2xl font-extrabold text-primary mb-4 tracking-tighter">
                   Open Source
@@ -332,7 +374,7 @@ export default function ProjectsSection() {
                 onClick={handleStarClick}
                 className={`flex items-center justify-between w-full px-4 py-3 border transition-all ${
                   hasStarred 
-                    ? 'bg-[#bdff00] text-black border-[#bdff00] font-bold' 
+                    ? 'bg-primary-fixed text-black border-primary-fixed font-bold'
                     : 'bg-white/5 border-white/10 text-white hover:bg-white/10'
                 }`}
                 title="Star project on GitHub"

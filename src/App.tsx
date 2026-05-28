@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import NeuralCanvas from './components/NeuralCanvas';
 import Marquee from './components/Marquee';
 import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
@@ -24,8 +23,6 @@ export default function App() {
   return (
     <div className="bg-[#0E0E0F] text-[#e5e2e3] selection:bg-[#bdff00] selection:text-black font-sans leading-relaxed overflow-x-hidden min-h-screen relative">
       
-      {/* Absolute floating canvas background */}
-      <NeuralCanvas />
 
       {/* Main navigation header */}
       <Header

@@ -8,6 +8,13 @@ export interface Project {
   icon?: string;
   link?: string;
   version?: string;
+  details?: {
+    status?: string;
+    deploymentLatency?: string;
+    mission?: string;
+    implementationDetails?: string[];
+    postMortem?: string;
+  };
 }
 
 export interface Experience {
