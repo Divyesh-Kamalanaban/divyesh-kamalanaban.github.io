@@ -1,0 +1,122 @@
+{
+  "section": {
+    "eyebrow": "Projects",
+    "title": "Selected Work",
+    "description": "A source-backed set of projects spanning full-stack product delivery, embedded security, and machine learning systems."
+  },
+  "openSource": {
+    "title": "Open Source",
+    "description": "Portfolio source and public code presence built around modular React and TypeScript components."
+  },
+  "labels": {
+    "close": "Close",
+    "url": "Go to project"
+  },
+  "defaults": {
+    "category": "Project",
+    "status": "Production",
+    "keyStat": "Responsive"
+  },
+  "projects": [
+    {
+      "id": "sororine",
+      "title": "Sororine",
+      "description": "Full-stack safety intelligence platform built with Next.js, Prisma, SQLite, and stateless JWT sessions.",
+      "url": "https://github.com/Divyesh-Kamalanaban/sororine",
+      "tags": [
+        "NEXT.JS",
+        "PRISMA",
+        "SQLITE"
+      ],
+      "category": "full-stack",
+      "version": "v1.0.0",
+      "image": "/assets/sororine.png",
+      "details": {
+        "status": "Production",
+        "keyStat": "Fast API + Secure Sessions",
+        "mission": "Full-stack safety intelligence platform built with Next.js App Router and TypeScript, featuring API routes, an ORM-backed data layer, and stateless JWT-secured sessions.",
+        "implementationDetails": [
+          "Built the application with Next.js App Router and TypeScript.",
+          "Added Prisma-backed persistence with SQLite for a lightweight data layer.",
+          "Implemented stateless JWT sessions and geospatial risk scoring for incident aggregation."
+        ],
+        "keyTakeaways": "Delivered a secure product-focused platform with a compact data stack and clear session boundaries."
+      }
+    },
+    {
+      "id": "sleeqc",
+      "title": "SleeQC",
+      "description": "Adaptive embedded security prototype for ESP32-S3 using TensorFlow Lite and resource-aware profile switching.",
+      "tags": [
+        "ESP32",
+        "TENSORFLOW LITE",
+        "C/C++"
+      ],
+      "url": "https://github.com/Divyesh-Kamalanaban/sleeqc",
+      "category": "embedded",
+      "version": "v0.2.0",
+      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=SleeQC",
+      "details": {
+        "status": "Prototype",
+        "keyStat": "Edge-Constrained",
+        "mission": "Resource-adaptive post-quantum cryptography system built for an ESP32-S3 edge device.",
+        "implementationDetails": [
+          "Prototyped a resource-adaptive post-quantum cryptography system on an ESP32-S3.",
+          "Deployed a TensorFlow Lite decision engine to monitor runtime metrics.",
+          "Switched between security profiles automatically based on device conditions."
+        ],
+        "keyTakeaways": "The prototype demonstrated the feasibility of deploying adaptive security solutions on resource-constrained edge devices."
+      }
+    },
+    {
+      "id": "circle-communications",
+      "title": "Circle Communications Dashboard",
+      "description": "React and MUI dashboard work from a software developer internship, including state management and streamed invoice generation.",
+      "url": "https://github.com/Divyesh-Kamalanaban/circle-communications",
+      "tags": [
+        "REACT",
+        "MUI",
+        "REDUX"
+      ],
+      "category": "frontend",
+      "version": "internship",
+      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=Circle+Communications",
+      "details": {
+        "status": "Internship",
+        "keyStat": "19ms p95",
+        "mission": "React frontend work for internal communications tooling with MUI, Redux Toolkit, and contextual real-time synchronization.",
+        "implementationDetails": [
+          "Built the UI with React and MUI components.",
+          "Used Redux Toolkit and React Context API for state synchronization.",
+          "Generated structured PDF invoices and fixed an unbounded query with server-side pagination."
+        ],
+        "keyTakeaways": "The delivery showed that the frontend could stay responsive while the backend work removed a major latency spike."
+      }
+    },
+    {
+      "id": "cigre-mv-fault-engine",
+      "title": "CIGRE-MV Fault Detection Engine",
+      "description": "Python-based random forest ensemble for fault detection and localization on synthetic power grid scenarios.",
+      "url": "https://github.com/Divyesh-Kamalanaban/cigre-mv-fault-engine",
+      "tags": [
+        "PYTHON",
+        "PANDAPOWER",
+        "SCIKIT-LEARN"
+      ],
+      "category": "ml",
+      "version": "research",
+      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=CIGRE-MV",
+      "details": {
+        "status": "Research",
+        "keyStat": "95% Accuracy",
+        "mission": "Modular fault detection engine for CIGRE-MV power networks using Python and ensemble learning.",
+        "implementationDetails": [
+          "Built a multi-tier random forest ensemble using object-oriented Python.",
+          "Synthesized more than 21,000 labeled power grid scenarios with pandapower.",
+          "Reduced voltage computation time by 70% by replacing the Newton-Raphson solver with a DLPF-based implementation."
+        ],
+        "keyTakeaways": "The dataset scale and solver optimization made the prototype viable for real-time inference research."
+      }
+    }
+  ]
+}

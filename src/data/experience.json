@@ -1,0 +1,41 @@
+{
+  "section": {
+    "eyebrow": "Experience Path",
+    "title": "Building Digital Foundations"
+  },
+  "labels": {
+    "keyAccomplishments": "Key Accomplishments"
+  },
+  "jobs": [
+    {
+      "id": "circle",
+      "title": "Software Developer Intern",
+      "company": "CIRCLE COMMUNICATIONS",
+      "period": "MAY 2025",
+      "description": "Built a React frontend with MUI components, Redux Toolkit state management, React Context synchronization, and code-split routing for performance optimization.",
+      "shadowColor": "shadow-[0_0_10px_#BDFF00]",
+      "pointColor": "bg-primary-fixed",
+      "bullets": [
+        "Built a React frontend with MUI components, Redux Toolkit for state management, and React Context API for real-time data synchronization.",
+        "Implemented code-split routing using lazy loading to improve performance and loading behavior.",
+        "Generated structured PDF invoices averaging about 2ms per document via PDFKit with streamed HTTP delivery.",
+        "Reduced p95 response time from 1.97s to 19ms by fixing an unbounded query and adding server-side pagination."
+      ]
+    },
+    {
+      "id": "nit-trichy",
+      "title": "Summer Research Intern (ML & Power Systems)",
+      "company": "NATIONAL INSTITUTE OF TECHNOLOGY (NIT) TRICHY",
+      "period": "JUN 2025 — JUL 2025",
+      "description": "Designed and implemented a modular fault detection engine for CIGRE-MV power networks using Python and random forest ensembles.",
+      "shadowColor": "shadow-[0_0_10px_#d0bcff]",
+      "pointColor": "bg-secondary",
+      "bullets": [
+        "Architected a multi-tier random forest ensemble in Python using object-oriented principles, reaching 92% fault detection and 100% fault localization accuracy.",
+        "Synthesized more than 21,000 labeled power grid scenarios with pandapower to strengthen the supervised learning dataset.",
+        "Replaced the Newton-Raphson solver with an optimized DLPF-based implementation, reducing voltage computation time by 70%.",
+        "Managed iterative prototyping and validation for a fault detection engine targeting real-time inference needs."
+      ]
+    }
+  ]
+}

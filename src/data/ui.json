@@ -1,0 +1,60 @@
+{
+  "header": {
+    "brand": "DIVYESH K",
+    "sections": [
+      "projects",
+      "experience",
+      "stack",
+      "contact"
+    ],
+    "resumeButton": "Resume"
+  },
+  "hero": {
+    "headlinePrefix": "Building",
+    "headlineHighlight": "full-stack systems",
+    "headlineSuffix": "for real-world problems.",
+    "subtitle": "Software engineer focused on React interfaces, backend APIs, machine learning pipelines, and embedded prototypes. I care about performance, reliability, and clean delivery.",
+    "initializeButton": "Open Resume",
+    "deploymentsButton": "View Projects"
+  },
+  "marquee": {
+    "primary": "REACT • TYPESCRIPT • NEXT.JS • NODE.JS •",
+    "secondary": "PYTHON • TENSORFLOW • AWS • SQLITE •"
+  },
+  "footer": {
+    "brand": "DIVYESH K",
+    "copyright": "© 2026 DIVYESH K. BUILT FROM VERIFIED PROJECT WORK.",
+    "sourceButton": "Source",
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Divyesh-Kamalanaban"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/divyesh-kamalanaban"
+      }
+    ]
+  },
+  "modals": {
+    "resume": {
+      "badge": "Resume Vault Activated",
+      "title": "Divyesh K Resume",
+      "description": "Opening the latest resume PDF from the workspace.",
+      "fileName": "Divyesh_K_Resume.pdf",
+      "fileSize": "PDF",
+      "downloadLabel": "Download resume",
+      "alertMessage": "Resume download initiated."
+    },
+    "source": {
+      "badge": "Repository Handshake",
+      "title": "Source Integrity",
+      "description": "Portfolio source code and modular component structure for this site.",
+      "repositoryUrl": "https://github.com/Divyesh-Kamalanaban/improved-portfolio",
+      "copyLabel": "Copy Repository Path",
+      "copySuccessLabel": "Pipeline Linked!",
+      "externalUrl": "https://github.com/Divyesh-Kamalanaban",
+      "externalTitle": "Navigate to GitHub profile"
+    }
+  }
+}

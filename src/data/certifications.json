@@ -1,0 +1,219 @@
+{
+  "section": {
+    "eyebrow": "Certifications",
+    "title": "Licenses & Certifications"
+  },
+  "labels": {
+    "showCredential": "Show credential",
+    "skills": "Skills",
+    "plusMore": "+1 skill",
+    "expires": "Expires",
+    "issued": "Issued"
+  },
+  "certifications": [
+    {
+      "id": "mongodb-basics",
+      "title": "MongoDB Basics for Students",
+      "issuer": "MongoDB",
+      "issuerSlug": "mongodb",
+      "issued": "Issued Jun 2025",
+      "expires": null,
+      "credentialId": "9fae9c6f-1542-46bb-a4ce-8f819dfe6b04",
+      "url": "https://learn.mongodb.com/c/MONGO-DB-CREDENTIAL",
+      "skills": ["MongoDB", "NoSQL"],
+      "thumbnail": null
+    },
+    {
+      "id": "ibm-ai",
+      "title": "Getting Started with Artificial Intelligence",
+      "issuer": "IBM",
+      "issuerSlug": "ibm",
+      "issued": "Issued Jan 2026",
+      "expires": null,
+      "credentialId": "873ce863-3069-40ae-9df1-243db31ec1d3",
+      "url": "https://www.credly.com/badges/873ce863-3069-40ae-9df1-243db31ec1d3",
+      "skills": ["Machine Learning", "Artificial Intelligence (AI)"],
+      "thumbnail": null
+    },
+    {
+      "id": "accenture-gfg",
+      "title": "Gold Level in GFG contest",
+      "issuer": "Accenture",
+      "issuerSlug": "accenture",
+      "issued": "Issued Dec 2025",
+      "expires": null,
+      "credentialId": null,
+      "url": "#",
+      "skills": [],
+      "thumbnail": null
+    },
+    {
+      "id": "github-foundations",
+      "title": "GitHub Foundations",
+      "issuer": "GitHub",
+      "issuerSlug": "github",
+      "issued": "Issued Jun 2025",
+      "expires": "Expires Jun 2028",
+      "credentialId": "17cdbe3f-45d4-41a1-a4e0-ab10af8b5039",
+      "url": "https://www.credly.com/badges/17cdbe3f-45d4-41a1-a4e0-ab10af8b5039",
+      "skills": [],
+      "thumbnail": null
+    },
+    {
+      "id": "certificate-of-completion",
+      "title": "Certificate of Completion",
+      "issuer": "GitHub",
+      "issuerSlug": "github",
+      "issued": "Issued Jun 2025",
+      "expires": null,
+      "credentialId": null,
+      "url": "#",
+      "skills": [],
+      "thumbnail": "/certificates/github-completion.png"
+    },
+    {
+      "id": "ibm-sw-engineering",
+      "title": "Introduction to Software Engineering",
+      "issuer": "IBM",
+      "issuerSlug": "ibm",
+      "issued": "Issued Jun 2025",
+      "expires": null,
+      "credentialId": "Q1MS2JYTMFRU",
+      "url": "https://www.credly.com/badges/Q1MS2JYTMFRU",
+      "skills": ["Software Deployment", "Back-End Web Development"],
+      "thumbnail": null
+    },
+    {
+      "id": "meta-js",
+      "title": "Programming with JavaScript",
+      "issuer": "Meta",
+      "issuerSlug": "meta",
+      "issued": "Issued Apr 2025",
+      "expires": null,
+      "credentialId": "CON85YOUUE3P",
+      "url": "https://www.coursera.org/account/accomplishments/verify/CON85YOUUE3P",
+      "skills": ["JavaScript"],
+      "thumbnail": null
+    },
+    {
+      "id": "ibm-python-data-science",
+      "title": "Python for Data Science, AI & Development",
+      "issuer": "IBM",
+      "issuerSlug": "ibm",
+      "issued": "Issued Jan 2025",
+      "expires": null,
+      "credentialId": "7JWDMFOLSLDE",
+      "url": "https://www.coursera.org/account/accomplishments/verify/7JWDMFOLSLDE",
+      "skills": ["Machine Learning Algorithms", "Python (Programming Language)"],
+      "thumbnail": null
+    },
+    {
+      "id": "hackerrank-python",
+      "title": "Python (Basic)",
+      "issuer": "HackerRank",
+      "issuerSlug": "hackerrank",
+      "issued": "Issued Jan 2025",
+      "expires": null,
+      "credentialId": "843c4c4c5644",
+      "url": "https://www.hackerrank.com/certificates/843c4c4c5644",
+      "skills": ["Machine Learning Algorithms", "Python (Programming Language)"],
+      "thumbnail": null
+    },
+    {
+      "id": "meta-frontend",
+      "title": "Introduction to Front-End Development",
+      "issuer": "Meta",
+      "issuerSlug": "meta",
+      "issued": "Issued Dec 2024",
+      "expires": null,
+      "credentialId": "81IMWRONZSYJ",
+      "url": "https://www.coursera.org/account/accomplishments/verify/81IMWRONZSYJ",
+      "skills": ["Cascading Style Sheets (CSS)", "HTML5", "React.js", "Web Development"],
+      "thumbnail": null
+    },
+    {
+      "id": "intel-ai-entrepreneurship",
+      "title": "AI For Entrepreneurship",
+      "issuer": "Intel",
+      "issuerSlug": "intel",
+      "issued": "Issued Dec 2024",
+      "expires": null,
+      "credentialId": null,
+      "url": "#",
+      "skills": ["AI Prompting"],
+      "thumbnail": null
+    },
+    {
+      "id": "hackerrank-problem-solving",
+      "title": "Problem Solving (Basic)",
+      "issuer": "HackerRank",
+      "issuerSlug": "hackerrank",
+      "issued": "Issued Dec 2024",
+      "expires": null,
+      "credentialId": "f20d0005336b",
+      "url": "https://www.hackerrank.com/certificates/f20d0005336b",
+      "skills": [],
+      "thumbnail": null
+    },
+    {
+      "id": "hackerrank-react",
+      "title": "Frontend Developer (React) Certificate",
+      "issuer": "HackerRank",
+      "issuerSlug": "hackerrank",
+      "issued": "Issued Dec 2024",
+      "expires": null,
+      "credentialId": "9de990d8b066",
+      "url": "https://www.hackerrank.com/certificates/9de990d8b066",
+      "skills": ["Cascading Style Sheets (CSS)", "React.js", "JavaScript", "Web Development"],
+      "thumbnail": null
+    },
+    {
+      "id": "udemy-verilog",
+      "title": "Verilog HDL Fundamentals for Digital Design and Verification",
+      "issuer": "Udemy",
+      "issuerSlug": "udemy",
+      "issued": "Issued Oct 2024",
+      "expires": null,
+      "credentialId": "UC-ff4fb6b7-e0b3-4d18-9c8b-786a53a6dd96",
+      "url": "https://www.udemy.com/certificate/UC-ff4fb6b7-e0b3-4d18-9c8b-786a53a6dd96",
+      "skills": ["Verilog HDL", "Digital Design", "Verification"],
+      "thumbnail": null
+    },
+    {
+      "id": "hackerrank-react-basic",
+      "title": "React (Basic)",
+      "issuer": "HackerRank",
+      "issuerSlug": "hackerrank",
+      "issued": "Issued Jul 2024",
+      "expires": null,
+      "credentialId": "6D5803129F99",
+      "url": "https://www.hackerrank.com/certificates/6D5803129F99",
+      "skills": ["React.js", "JavaScript", "Web Development", "Frontend"],
+      "thumbnail": null
+    },
+    {
+      "id": "hackerrank-js-basic",
+      "title": "Javascript (Basic)",
+      "issuer": "HackerRank",
+      "issuerSlug": "hackerrank",
+      "issued": "Issued Mar 2024",
+      "expires": null,
+      "credentialId": "7D2B65A371A9",
+      "url": "https://www.hackerrank.com/certificates/7D2B65A371A9",
+      "skills": ["JavaScript", "Web Development"],
+      "thumbnail": null
+    },
+    {
+      "id": "hackerrank-css-basic",
+      "title": "CSS (Basic)",
+      "issuer": "HackerRank",
+      "issuerSlug": "hackerrank",
+      "issued": "Issued Sep 2021",
+      "expires": null,
+      "credentialId": "41937326f876",
+      "url": "https://www.hackerrank.com/certificates/41937326f876",
+      "skills": ["Cascading Style Sheets (CSS)", "Web Development"],
+      "thumbnail": null
+    }
+  ]
+}
