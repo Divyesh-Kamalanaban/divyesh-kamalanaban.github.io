@@ -1,0 +1,146 @@
+{
+  "section": {
+    "eyebrow": "Technical Stack",
+    "title": "Skills and Tools"
+  },
+  "selectedSkill": {
+    "name": "PYTHON",
+    "description": "Used as the primary language for ML pipelines, data processing, API backends, and rapid prototyping."
+  },
+  "labels": {
+    "telemetricSpecsPrefix": "Skill Focus //"
+  },
+  "categories": [
+    {
+      "title": "AI/ML & LLMs",
+      "subTitle": "Modeling Work",
+      "borderColor": "group-hover:border-[#acedff]",
+      "skills": [
+        {
+          "name": "LANGCHAIN",
+          "description": "Used to orchestrate LLM chains, agents, and retrieval-augmented workflows."
+        },
+        {
+          "name": "LANGGRAPH",
+          "description": "Built stateful, multi-step agent graphs for complex LLM-based decision pipelines."
+        },
+        {
+          "name": "VLLM",
+          "description": "Deployed high-throughput LLM inference servers with PagedAttention and continuous batching."
+        },
+        {
+          "name": "OLLAMA",
+          "description": "Ran local LLM inference for prototyping and offline-capable AI features."
+        },
+        {
+          "name": "HUGGINGFACE TRANSFORMERS",
+          "description": "Used the Transformers library for model loading, fine-tuning, and inference pipelines."
+        },
+        {
+          "name": "PYTORCH",
+          "description": "Used for deep learning model development, custom training loops, and tensor operations."
+        },
+        {
+          "name": "TENSORFLOW",
+          "description": "Used for ML experimentation and model-driven prototypes."
+        },
+        {
+          "name": "SCIKIT-LEARN",
+          "description": "Used for random forest ensembles and classic ML workflows."
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "subTitle": "Core Syntax",
+      "borderColor": "group-hover:border-[#bdff00]",
+      "skills": [
+        {
+          "name": "PYTHON",
+          "description": "Used as the primary language for ML pipelines, data processing, API backends, and rapid prototyping."
+        },
+        {
+          "name": "TYPESCRIPT",
+          "description": "Used for typed React applications and maintainable application logic."
+        },
+        {
+          "name": "JAVASCRIPT",
+          "description": "Used for browser interactions, DOM behavior, and Node-based tooling."
+        }
+      ]
+    },
+    {
+      "title": "Full-Stack",
+      "subTitle": "Interactive Interfaces",
+      "borderColor": "group-hover:border-secondary",
+      "skills": [
+        {
+          "name": "REACT",
+          "description": "Used to build modular interfaces and reusable component structures."
+        },
+        {
+          "name": "REDUX TOOLKIT",
+          "description": "Used for predictable state management and slice-based application logic."
+        },
+        {
+          "name": "NODE.JS",
+          "description": "Used to build APIs, tooling, and backend services."
+        },
+        {
+          "name": "MONGODB",
+          "description": "Used for document-oriented storage and flexible schema design."
+        },
+        {
+          "name": "SQL",
+          "description": "Used to design and query structured datasets with predictable schema boundaries."
+        }
+      ]
+    },
+    {
+      "title": "Data Engineering",
+      "subTitle": "Processing",
+      "borderColor": "group-hover:border-[#434933]",
+      "skills": [
+        {
+          "name": "PANDAS",
+          "description": "Used for dataset preparation, transformation, and structured data analysis."
+        },
+        {
+          "name": "NUMPY",
+          "description": "Used for numerical array operations and scientific computing."
+        },
+        {
+          "name": "MLFLOW",
+          "description": "Tracked experiments, logged parameters, and managed model versions with MLflow."
+        }
+      ]
+    },
+    {
+      "title": "Cloud & DevOps",
+      "subTitle": "Delivery Layer",
+      "borderColor": "group-hover:border-[#434933]",
+      "skills": [
+        {
+          "name": "DOCKER",
+          "description": "Containerized applications for consistent environments and streamlined deployments."
+        },
+        {
+          "name": "AWS",
+          "description": "Used for cloud deployment and infrastructure support."
+        },
+        {
+          "name": "GITHUB ACTIONS (CI/CD)",
+          "description": "Automated build, test, and deployment pipelines with GitHub Actions workflows."
+        },
+        {
+          "name": "LINUX",
+          "description": "Used as the primary development and deployment environment."
+        },
+        {
+          "name": "K6",
+          "description": "Ran load testing scripts to benchmark API performance and identify bottlenecks."
+        }
+      ]
+    }
+  ]
+}
