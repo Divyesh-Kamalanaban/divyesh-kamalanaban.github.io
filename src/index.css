@@ -85,21 +85,6 @@
     opacity: 0.8;
   }
 
-  .word-cloud-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 7.5rem;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.02);
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 0;
-    user-select: none;
-    letter-spacing: -0.05em;
-  }
-
   .px-gutter {
     padding-left: 24px;
     padding-right: 24px;

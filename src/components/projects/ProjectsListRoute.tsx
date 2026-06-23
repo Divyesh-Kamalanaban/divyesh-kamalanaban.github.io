@@ -1,31 +1,43 @@
-import projectsContent from '../data/projects.json';
-import type { Project } from '../types';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import projectsContent from '../../data/projects.json';
+import type { Project } from '../../types';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
-export default function ProjectsSection() {
+export default function ProjectsListRoute() {
   const projects = projectsContent.projects as Project[];
 
   return (
-    <section className="py-stack-xl max-w-container-max mx-auto px-gutter relative tracking-tight" id="projects">
-      <div className="relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="text-left">
-            <span className="text-xs font-bold text-primary uppercase border-l-4 border-primary-fixed pl-4 mb-4 block tracking-wider">
-              {projectsContent.section.eyebrow}
-            </span>
-            <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tighter">
-              {projectsContent.section.title}
-            </h2>
-          </div>
-          <p className="text-base text-on-surface-variant max-w-md tracking-normal text-left sm:text-right">
+    <section className="min-h-screen w-full">
+      {/* 100vh Hero Header */}
+      <div className="h-screen flex flex-col justify-center items-center text-center px-gutter relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-fixed/5 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary-fixed/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="relative z-10 max-w-3xl mx-auto">
+          <span className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-6 block">
+            {projectsContent.section.eyebrow}
+          </span>
+          <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl font-extrabold text-primary tracking-tighter mb-6">
+            Projects
+          </h1>
+          <p className="text-base md:text-lg text-on-surface-variant leading-relaxed max-w-xl mx-auto">
             {projectsContent.section.description}
           </p>
+          <div className="mt-10 flex items-center justify-center gap-3 text-white/40 text-xs font-mono tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-primary-fixed animate-pulse" />
+            <span>Scroll to explore</span>
+            <Sparkles className="w-3.5 h-3.5 text-primary-fixed animate-pulse" />
+          </div>
         </div>
+      </div>
 
+      {/* Project Grid */}
+      <div className="max-w-container-max mx-auto px-gutter pb-24 -mt-32 relative z-20">
         {/* Row 1: Featured (col-span-8) + Standard (col-span-4) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
-          <Link to={`/projects/${projects[0].id}`} className="md:col-span-8 group gradient-border block">
+          {/* Featured: Sororine */}
+          <Link key={projects[0].id} to={`/projects/${projects[0].id}`} className="md:col-span-8 group gradient-border block">
             <div className="glass-card p-6 h-full min-h-85 flex flex-col justify-between overflow-hidden relative">
               {projects[0].image && (
                 <img src={projects[0].image} alt={projects[0].title} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-[1.03] transition-all duration-700 pointer-events-none" />
@@ -36,7 +48,7 @@ export default function ProjectsSection() {
                     <span key={tag} className="bg-surface-container-highest px-3 py-1 text-[10px] font-bold text-primary tracking-wider uppercase">{tag}</span>
                   ))}
                 </div>
-                <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-primary tracking-tighter mb-3">{projects[0].title}</h3>
+                <h2 className="font-headline text-2xl md:text-3xl font-extrabold text-primary tracking-tighter mb-3">{projects[0].title}</h2>
                 <p className="text-sm text-on-surface-variant leading-relaxed max-w-lg">{projects[0].description}</p>
               </div>
               <div className="relative z-10 pt-6 border-t border-outline-variant/25 flex items-center justify-between">
@@ -50,7 +62,8 @@ export default function ProjectsSection() {
             </div>
           </Link>
 
-          <Link to={`/projects/${projects[1].id}`} className="md:col-span-4 group gradient-border block">
+          {/* Standard: SleeQC */}
+          <Link key={projects[1].id} to={`/projects/${projects[1].id}`} className="md:col-span-4 group gradient-border block">
             <div className="glass-card p-8 h-full min-h-85 flex flex-col justify-between">
               <div>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -58,7 +71,7 @@ export default function ProjectsSection() {
                     <span key={tag} className="bg-surface-container-highest px-3 py-1 text-[10px] font-bold text-primary tracking-wider uppercase">{tag}</span>
                   ))}
                 </div>
-                <h3 className="font-headline text-2xl font-extrabold text-primary tracking-tighter mb-3">{projects[1].title}</h3>
+                <h2 className="font-headline text-2xl font-extrabold text-primary tracking-tighter mb-3">{projects[1].title}</h2>
                 <p className="text-sm text-on-surface-variant leading-relaxed">{projects[1].description}</p>
               </div>
               <div className="pt-6 border-t border-outline-variant/25 mt-6 flex items-center justify-between">
@@ -81,7 +94,7 @@ export default function ProjectsSection() {
                       <span key={tag} className="bg-surface-container-highest px-3 py-1 text-[10px] font-bold text-primary tracking-wider uppercase">{tag}</span>
                     ))}
                   </div>
-                  <h3 className="font-headline text-2xl font-extrabold text-primary tracking-tighter mb-3">{project.title}</h3>
+                  <h2 className="font-headline text-2xl font-extrabold text-primary tracking-tighter mb-3">{project.title}</h2>
                   <p className="text-sm text-on-surface-variant leading-relaxed">{project.description}</p>
                 </div>
                 <div className="pt-4 border-t border-outline-variant/20 mt-4 flex items-center justify-between">
@@ -92,17 +105,6 @@ export default function ProjectsSection() {
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* View All Projects Button */}
-        <div className="flex justify-center mt-10">
-          <Link
-            to="/projects"
-            className="group inline-flex items-center gap-2.5 px-6 py-3 border border-white/20 hover:border-primary-fixed/50 text-white/80 hover:text-primary-fixed text-sm font-bold font-mono tracking-wider uppercase rounded-lg transition-all duration-300 hover:bg-white/[0.03]"
-          >
-            <span>View All Projects</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
         </div>
       </div>
     </section>

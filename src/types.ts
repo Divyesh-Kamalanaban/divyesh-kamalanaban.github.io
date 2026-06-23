@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  url: string;
   category?: 'ai' | 'infra' | 'data' | 'system';
   image?: string;
   icon?: string;
@@ -10,34 +11,9 @@ export interface Project {
   version?: string;
   details?: {
     status?: string;
-    deploymentLatency?: string;
+    keyStat?: string;
     mission?: string;
     implementationDetails?: string[];
-    postMortem?: string;
+    keyTakeaways?: string;
   };
-}
-
-export interface Experience {
-  id: string;
-  title: string;
-  company: string;
-  period: string;
-  role: string;
-  description: string;
-  bulletPoints?: string[];
-}
-
-export interface SkillCategory {
-  title: string;
-  bulletColor: string;
-  borderColor: string;
-  skills: string[];
-}
-
-export interface Certification {
-  id: string;
-  title: string;
-  issuer: string;
-  bgColor: string;
-  textColor: string;
 }
