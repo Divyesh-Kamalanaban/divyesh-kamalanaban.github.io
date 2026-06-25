@@ -1,0 +1,8 @@
+{
+  "avatar": {
+    "src": "/assets/profile.png",
+    "alt": "Divyesh K",
+    "initials": "DK"
+  },
+  "skills": ["MLFlow","LangChain", "LangGraph", "Express.js", "HF Transformers", "Keras"]
+}

@@ -45,33 +45,48 @@ export default function ProjectDetailRoute() {
         )}
       </div>
 
-      {/* Image */}
+      {/* Image — full width, no height cap */}
       {project.image && (
-        <div className="mb-10">
-          <img
-            src={project.image}
-            alt={project.image}
-            className="w-full h-auto max-h-[50vh] object-contain rounded-lg border border-outline-variant/20"
-          />
+        <div className="mb-12">
+          <div className="rounded-lg border border-outline-variant/20 overflow-hidden bg-surface-container-low">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full object-cover"
+              style={{ maxHeight: '65vh', minHeight: '240px' }}
+            />
+          </div>
         </div>
       )}
 
-      {/* Content grid */}
+      {/* Content grid: Mission + Key Takeaways */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         {project.details?.mission && (
           <div className="gradient-border">
-            <div className="glass-card p-6">
-              <h2 className="font-headline text-lg font-extrabold text-primary tracking-tighter mb-3">Mission</h2>
-              <p className="text-sm text-on-surface-variant leading-relaxed">{project.details.mission}</p>
+            <div className="glass-card p-6 h-full">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed" />
+                <h2 className="font-headline text-base font-extrabold text-primary-fixed tracking-tighter uppercase">Mission</h2>
+              </div>
+              <p className="text-sm text-on-surface-variant leading-relaxed pl-4 border-l-2 border-primary-fixed/20">
+                {project.details.mission}
+              </p>
             </div>
           </div>
         )}
 
         {project.details?.keyTakeaways && (
           <div className="gradient-border">
-            <div className="glass-card p-6">
-              <h2 className="font-headline text-lg font-extrabold text-primary tracking-tighter mb-3">Key Takeaways</h2>
-              <p className="text-sm text-on-surface-variant leading-relaxed">{project.details.keyTakeaways}</p>
+            <div className="glass-card p-6 h-full">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                <h2 className="font-headline text-base font-extrabold text-secondary tracking-tighter uppercase">Key Takeaways</h2>
+              </div>
+              <div className="pl-4 border-l-2 border-secondary/20">
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  {project.details.keyTakeaways}
+                </p>
+              </div>
             </div>
           </div>
         )}
@@ -81,12 +96,21 @@ export default function ProjectDetailRoute() {
       {project.details?.implementationDetails && (
         <div className="gradient-border mb-10">
           <div className="glass-card p-6">
-            <h2 className="font-headline text-lg font-extrabold text-primary tracking-tighter mb-4">Technical Implementation</h2>
-            <ul className="space-y-3">
-              {project.details.implementationDetails.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-on-surface-variant leading-relaxed">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary-fixed flex-shrink-0" />
-                  <span>{item}</span>
+            <div className="flex items-center gap-2 mb-5">
+              <div className="flex gap-1">
+                <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                <span className="w-2 h-2 rounded-full bg-cyan-400/60" />
+                <span className="w-2 h-2 rounded-full bg-cyan-400/30" />
+              </div>
+              <h2 className="font-headline text-base font-extrabold text-cyan-400 tracking-tighter uppercase">Technical Implementation</h2>
+            </div>
+            <ul className="space-y-4">
+              {project.details.implementationDetails.map((item, idx) => (
+                <li key={item} className="flex gap-4 text-sm text-on-surface-variant leading-relaxed">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/5 text-[10px] font-bold font-mono text-white/40 flex-shrink-0 mt-0.5">
+                    {idx + 1}
+                  </span>
+                  <span className="pt-0.5">{item}</span>
                 </li>
               ))}
             </ul>

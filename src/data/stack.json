@@ -79,8 +79,8 @@
           "description": "Used to build modular interfaces and reusable component structures."
         },
         {
-          "name": "REDUX TOOLKIT",
-          "description": "Used for predictable state management and slice-based application logic."
+          "name": "EXPRESS JS",
+          "description": "Used to build RESTful APIs and server-side request handling."
         },
         {
           "name": "NODE.JS",

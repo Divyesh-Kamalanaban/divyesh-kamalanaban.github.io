@@ -1,9 +1,9 @@
 {
   "section": {
-    "headlinePrefix": "Let's build the",
-    "headlineHighlight": "next product",
-    "headlineSuffix": "."
+    "headlinePrefix": "Open to",
+    "headlineHighlight": "discussions ",
+    "headlineSuffix": " on anything tech."
   },
-  "emailPlaceholder": "divyeshkamalanaban@gmail.com",
-  "connectLabel": "Send"
+  "email": "divyeshtalkswork@gmail.com",
+  "mailtoLabel": "Let's Talk"
 }

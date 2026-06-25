@@ -36,18 +36,6 @@
       "thumbnail": null
     },
     {
-      "id": "accenture-gfg",
-      "title": "Gold Level in GFG contest",
-      "issuer": "Accenture",
-      "issuerSlug": "accenture",
-      "issued": "Issued Dec 2025",
-      "expires": null,
-      "credentialId": null,
-      "url": "#",
-      "skills": [],
-      "thumbnail": null
-    },
-    {
       "id": "github-foundations",
       "title": "GitHub Foundations",
       "issuer": "GitHub",
@@ -58,18 +46,6 @@
       "url": "https://www.credly.com/badges/17cdbe3f-45d4-41a1-a4e0-ab10af8b5039",
       "skills": [],
       "thumbnail": null
-    },
-    {
-      "id": "certificate-of-completion",
-      "title": "Certificate of Completion",
-      "issuer": "GitHub",
-      "issuerSlug": "github",
-      "issued": "Issued Jun 2025",
-      "expires": null,
-      "credentialId": null,
-      "url": "#",
-      "skills": [],
-      "thumbnail": "/certificates/github-completion.png"
     },
     {
       "id": "ibm-sw-engineering",
@@ -165,18 +141,6 @@
       "credentialId": "9de990d8b066",
       "url": "https://www.hackerrank.com/certificates/9de990d8b066",
       "skills": ["Cascading Style Sheets (CSS)", "React.js", "JavaScript", "Web Development"],
-      "thumbnail": null
-    },
-    {
-      "id": "udemy-verilog",
-      "title": "Verilog HDL Fundamentals for Digital Design and Verification",
-      "issuer": "Udemy",
-      "issuerSlug": "udemy",
-      "issued": "Issued Oct 2024",
-      "expires": null,
-      "credentialId": "UC-ff4fb6b7-e0b3-4d18-9c8b-786a53a6dd96",
-      "url": "https://www.udemy.com/certificate/UC-ff4fb6b7-e0b3-4d18-9c8b-786a53a6dd96",
-      "skills": ["Verilog HDL", "Digital Design", "Verification"],
       "thumbnail": null
     },
     {

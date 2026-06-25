@@ -1,6 +1,6 @@
 {
   "header": {
-    "brand": "DIVYESH K",
+    "brand": "DIV.",
     "sections": [
       "projects",
       "experience",
@@ -11,20 +11,19 @@
   },
   "hero": {
     "headlinePrefix": "Building",
-    "headlineHighlight": "full-stack systems",
+    "headlineHighlight": "intelligent systems",
     "headlineSuffix": "for real-world problems.",
-    "subtitle": "Software engineer focused on React interfaces, backend APIs, machine learning pipelines, and embedded prototypes. I care about performance, reliability, and clean delivery.",
+    "subtitle": "Software engineer focused on Agents, RAG, LLM quantization, ML modelling and observability, and full stack systems.",
     "initializeButton": "Open Resume",
     "deploymentsButton": "View Projects"
   },
   "marquee": {
-    "primary": "REACT • TYPESCRIPT • NEXT.JS • NODE.JS •",
-    "secondary": "PYTHON • TENSORFLOW • AWS • SQLITE •"
+    "primary": "MLFLOW • LANGCHAIN • KERAS • TRANSFORMERS •",
+    "secondary": "PYTHON • TENSORFLOW • JAVASCRIPT • EXPRESS.JS •"
   },
   "footer": {
-    "brand": "DIVYESH K",
-    "copyright": "© 2026 DIVYESH K. BUILT FROM VERIFIED PROJECT WORK.",
-    "sourceButton": "Source",
+    "brand": "DIV.",
+    "copyright": "© 2026 DIVYESH K. All Rights Reserved.",
     "links": [
       {
         "label": "GitHub",
@@ -35,26 +34,5 @@
         "href": "https://linkedin.com/in/divyesh-kamalanaban"
       }
     ]
-  },
-  "modals": {
-    "resume": {
-      "badge": "Resume Vault Activated",
-      "title": "Divyesh K Resume",
-      "description": "Opening the latest resume PDF from the workspace.",
-      "fileName": "Divyesh_K_Resume.pdf",
-      "fileSize": "PDF",
-      "downloadLabel": "Download resume",
-      "alertMessage": "Resume download initiated."
-    },
-    "source": {
-      "badge": "Repository Handshake",
-      "title": "Source Integrity",
-      "description": "Portfolio source code and modular component structure for this site.",
-      "repositoryUrl": "https://github.com/Divyesh-Kamalanaban/improved-portfolio",
-      "copyLabel": "Copy Repository Path",
-      "copySuccessLabel": "Pipeline Linked!",
-      "externalUrl": "https://github.com/Divyesh-Kamalanaban",
-      "externalTitle": "Navigate to GitHub profile"
-    }
   }
 }

@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import certificationsContent from '../data/certifications.json';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface Certification {
   id: string;
@@ -14,8 +15,14 @@ interface Certification {
   thumbnail: string | null;
 }
 
+const INITIAL_ROWS = 2;
+const COLS = 3;
+const INITIAL_COUNT = INITIAL_ROWS * COLS;
+
 export default function CertificationsSection() {
   const certifications = certificationsContent.certifications as Certification[];
+  const [showAll, setShowAll] = useState(false);
+  const visibleCertifications = showAll ? certifications : certifications.slice(0, INITIAL_COUNT);
 
   return (
     <section className="py-stack-xl bg-[#0E0E0F] relative tracking-tight border-y border-white/5" id="certifications">
@@ -30,7 +37,7 @@ export default function CertificationsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {certifications.map((cert) => {
+          {visibleCertifications.map((cert) => {
             const iconUrl = cert.issuerSlug
               ? `https://cdn.simpleicons.org/${cert.issuerSlug}/ffffff`
               : null;
@@ -120,6 +127,23 @@ export default function CertificationsSection() {
             );
           })}
         </div>
+
+        {/* Show More / Show Less Button */}
+        {certifications.length > INITIAL_COUNT && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="group inline-flex items-center gap-2.5 px-6 py-3 border border-white/20 hover:border-primary-fixed/50 text-white/80 hover:text-primary-fixed text-sm font-bold font-mono tracking-wider uppercase rounded-lg transition-all duration-300 hover:bg-white/[0.03] cursor-pointer"
+            >
+              <span>{showAll ? 'Show Less' : `Show All (${certifications.length})`}</span>
+              {showAll ? (
+                <ChevronUp className="w-4 h-4 transition-transform duration-300" />
+              ) : (
+                <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

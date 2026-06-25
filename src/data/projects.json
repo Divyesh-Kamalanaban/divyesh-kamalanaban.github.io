@@ -2,7 +2,7 @@
   "section": {
     "eyebrow": "Projects",
     "title": "Selected Work",
-    "description": "A source-backed set of projects spanning full-stack product delivery, embedded security, and machine learning systems."
+    "description": ""
   },
   "openSource": {
     "title": "Open Source",
@@ -19,15 +19,32 @@
   },
   "projects": [
     {
+      "id": "checkyollama",
+      "title": "checkyollama",
+      "description": "VS Code extension for Ollama Modelfiles with TextMate grammar, LSP-style hover docs, real-time diagnostics, and CI via GitHub Actions.",
+      "url": "https://github.com/Divyesh-Kamalanaban/checkyollama",
+      "tags": ["TYPESCRIPT", "VS CODE API", "TEXTMATE"],
+      "category": "tooling",
+      "version": "v1.0.0",
+      "image": "/assets/checkyollama.png",
+      "details": {
+        "status": "Production",
+        "keyStat": "Published on Marketplace",
+        "mission": "A published VS Code extension that brings language-server-style tooling to Ollama Modelfiles — syntax highlighting, hover documentation, and real-time diagnostics.",
+        "implementationDetails": [
+          "Authored a TextMate grammar for Ollama Modelfile syntax and wired it into the VS Code extension host.",
+          "Implemented LSP-style hover providers and a real-time diagnostics engine using the VS Code API.",
+          "Set up CI with GitHub Actions to lint, test, and package the extension on every push."
+        ],
+        "keyTakeaways": "End-to-end ownership from grammar authoring to Marketplace publication, with a real test suite and CI pipeline."
+      }
+    },
+    {
       "id": "sororine",
       "title": "Sororine",
       "description": "Full-stack safety intelligence platform built with Next.js, Prisma, SQLite, and stateless JWT sessions.",
       "url": "https://github.com/Divyesh-Kamalanaban/sororine",
-      "tags": [
-        "NEXT.JS",
-        "PRISMA",
-        "SQLITE"
-      ],
+      "tags": ["NEXT.JS", "PRISMA", "SQLITE"],
       "category": "full-stack",
       "version": "v1.0.0",
       "image": "/assets/sororine.png",
@@ -47,11 +64,7 @@
       "id": "sleeqc",
       "title": "SleeQC",
       "description": "Adaptive embedded security prototype for ESP32-S3 using TensorFlow Lite and resource-aware profile switching.",
-      "tags": [
-        "ESP32",
-        "TENSORFLOW LITE",
-        "C/C++"
-      ],
+      "tags": ["ESP32", "TENSORFLOW LITE", "C/C++"],
       "url": "https://github.com/Divyesh-Kamalanaban/sleeqc",
       "category": "embedded",
       "version": "v0.2.0",
@@ -69,53 +82,66 @@
       }
     },
     {
-      "id": "circle-communications",
-      "title": "Circle Communications Dashboard",
-      "description": "React and MUI dashboard work from a software developer internship, including state management and streamed invoice generation.",
-      "url": "https://github.com/Divyesh-Kamalanaban/circle-communications",
-      "tags": [
-        "REACT",
-        "MUI",
-        "REDUX"
-      ],
-      "category": "frontend",
-      "version": "internship",
-      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=Circle+Communications",
+      "id": "nucleotide-transformer-quants",
+      "title": "Nucleotide Transformer Quantization",
+      "description": "NF4 4-bit quantization of a 2.5B genomics model reducing VRAM from 4.76 GB to 1.46 GB with 0.99 cosine similarity preserved.",
+      "url": "https://huggingface.co/Divyesh-Kamalanaban/nucleotide-transformer-quants",
+      "tags": ["PYTHON", "TRANSFORMERS", "BITSANDBYTES"],
+      "category": "ml",
+      "version": "v1.0.0",
+      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=NT+Quants",
       "details": {
-        "status": "Internship",
-        "keyStat": "19ms p95",
-        "mission": "React frontend work for internal communications tooling with MUI, Redux Toolkit, and contextual real-time synchronization.",
+        "status": "Production",
+        "keyStat": "1.46 GB VRAM (↓69%)",
+        "mission": "Applied NF4 4-bit quantization to InstaDeepAI's 2.5B Nucleotide Transformer to make genomics-scale LLMs accessible on consumer hardware.",
         "implementationDetails": [
-          "Built the UI with React and MUI components.",
-          "Used Redux Toolkit and React Context API for state synchronization.",
-          "Generated structured PDF invoices and fixed an unbounded query with server-side pagination."
+          "Quantized a 2.5B parameter genomics model to NF4 4-bit precision using bitsandbytes.",
+          "Reduced peak VRAM from 4.76 GB to 1.46 GB — a 69% reduction — while retaining 0.99 cosine similarity to the original embeddings.",
+          "Published weights to HuggingFace with a reproducible notebook; the model has 50+ downloads."
         ],
-        "keyTakeaways": "The delivery showed that the frontend could stay responsive while the backend work removed a major latency spike."
+        "keyTakeaways": "Demonstrated that aggressive quantization can preserve embedding fidelity on domain-specific biological language models."
       }
     },
     {
-      "id": "cigre-mv-fault-engine",
-      "title": "CIGRE-MV Fault Detection Engine",
-      "description": "Python-based random forest ensemble for fault detection and localization on synthetic power grid scenarios.",
-      "url": "https://github.com/Divyesh-Kamalanaban/cigre-mv-fault-engine",
-      "tags": [
-        "PYTHON",
-        "PANDAPOWER",
-        "SCIKIT-LEARN"
-      ],
-      "category": "ml",
-      "version": "research",
-      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=CIGRE-MV",
+      "id": "civiclink",
+      "title": "CivicLink",
+      "description": "MERN stack civic governance platform connecting citizens to local government services and issue reporting.",
+      "url": "https://github.com/Divyesh-Kamalanaban/civiclink",
+      "tags": ["MONGODB", "EXPRESS", "REACT", "NODE.JS"],
+      "category": "full-stack",
+      "version": "v1.0.0",
+      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=CivicLink",
       "details": {
-        "status": "Research",
-        "keyStat": "95% Accuracy",
-        "mission": "Modular fault detection engine for CIGRE-MV power networks using Python and ensemble learning.",
+        "status": "Production",
+        "keyStat": "Full MERN Stack",
+        "mission": "Civic governance platform built on the MERN stack, enabling citizens to report issues and engage with local government services.",
         "implementationDetails": [
-          "Built a multi-tier random forest ensemble using object-oriented Python.",
-          "Synthesized more than 21,000 labeled power grid scenarios with pandapower.",
-          "Reduced voltage computation time by 70% by replacing the Newton-Raphson solver with a DLPF-based implementation."
+          "Built the full stack with MongoDB, Express, React, and Node.js.",
+          "Implemented issue reporting, status tracking, and role-based access for citizens and administrators.",
+          "Designed a RESTful API layer with authenticated routes and structured data models."
         ],
-        "keyTakeaways": "The dataset scale and solver optimization made the prototype viable for real-time inference research."
+        "keyTakeaways": "Demonstrated end-to-end MERN ownership across auth, data modeling, and a consumer-facing React frontend."
+      }
+    },
+    {
+      "id": "pulseguard",
+      "title": "PulseGuard",
+      "description": "ESP8266-based PPG sensor pipeline streaming heart rate data to InfluxDB with Grafana time-series dashboards.",
+      "url": "https://github.com/Divyesh-Kamalanaban/pulseguard",
+      "tags": ["ESP8266", "INFLUXDB", "GRAFANA"],
+      "category": "embedded",
+      "version": "v1.0.0",
+      "image": "https://placehold.co/800x500/0E0E0F/bdff00?text=PulseGuard",
+      "details": {
+        "status": "Prototype",
+        "keyStat": "Real-Time Streaming",
+        "mission": "End-to-end biosignal pipeline from an ESP8266 PPG sensor to InfluxDB time-series storage and Grafana visualization.",
+        "implementationDetails": [
+          "Wired a PPG sensor to an ESP8266 and streamed raw heart rate data over Wi-Fi.",
+          "Ingested the data stream into InfluxDB for time-series storage.",
+          "Built a Grafana dashboard for real-time heart rate visualization and alerting."
+        ],
+        "keyTakeaways": "Demonstrated a complete hardware-to-dashboard IoT pipeline with real biosignal data."
       }
     }
   ]

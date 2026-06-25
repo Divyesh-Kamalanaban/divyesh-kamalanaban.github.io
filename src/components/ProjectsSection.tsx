@@ -72,7 +72,7 @@ export default function ProjectsSection() {
 
         {/* Row 2: Remaining projects in 3-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {projects.slice(2).map((project) => (
+          {projects.slice(2, 5).map((project) => (
             <Link key={project.id} to={`/projects/${project.id}`} className="md:col-span-4 group gradient-border block">
               <div className="glass-card p-8 h-full min-h-45 flex flex-col justify-between">
                 <div>
