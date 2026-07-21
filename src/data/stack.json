@@ -13,7 +13,7 @@
   "categories": [
     {
       "title": "AI/ML & LLMs",
-      "subTitle": "Modeling Work",
+      "subTitle": "Inference and Fine-tuning",
       "borderColor": "group-hover:border-[#acedff]",
       "skills": [
         {
@@ -71,7 +71,7 @@
     },
     {
       "title": "Full-Stack",
-      "subTitle": "Interactive Interfaces",
+      "subTitle": "Web Servers & Interfaces",
       "borderColor": "group-hover:border-secondary",
       "skills": [
         {
